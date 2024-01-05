@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      font-size: 26px;
+      font-weight: 800;
+      font-family: 'Diphylleia', serif;
+      color: #fafafa;
+    }
+    body {
+      background-color: #e67e22;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    ul {
+      height: 70px;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    @keyframes side {
+      to {
+        transform: translateY(-210px);
+      }
+    }
+
+    ul li {
+      position: relative;
+      list-style: none;
+      height: 70px;
+      padding: 0px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: side 5s steps(3) infinite;
+      
+    }
+    h3 {
+      position: relative;
+      z-index: 1;
+      padding: 5px 10px;
+      overflow: hidden;
+    }
+    h3::after {
+      content: '';
+      border-left: 2px solid #3498db;
+      background-color: #e67e22;
+      margin: -10px 10px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transform: translateX(-100%);
+      z-index: 2;
+      animation: type 7s steps(18) infinite;
+    }
+    @keyframes type{
+      60% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    section {
+      display: flex;
+      gap: 10px;
+    }
+    section li {
+      transform: translateY(0px);
+      animation: rode 5s ease-in-out infinite;
+    }
+    @keyframes rode {
+      50% {
+        transform: translateY(-560px);
+      }
+      101% {
+        transform: translateY(0px);
+      }
+    }
+    h2 {
+      background-color: #3498db;
+      padding: 5px 10px;
+      border-radius: 10px;
+      text-align: end;
+    }
+    h2::after {
+      display: block;
+      content: 'ingat tuhan';
+      font-size: 12px;
+      transform:scale(0);
+      transition: 1s all;
+      
+    }
+    h2:hover::after {
+      transform: scaleX(1);
+    }
+  </style>
+  <header>
+    <h3>Odin Nordik</h3>
+    <ul>
+      <li style="background-color: #f1c40f;">pasti Max Win!!!</li>
+      <li style="background-color: #3498db;">Pastin Menang</li>
+      <li style="background-color: #2ecc71;">Pasti Kaya</li>
+    </ul>
+    <section>
+      <ul style="background-color: #2ecc71;">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+      </ul>
+      <ul style="background-color: #3498db;">
+        <li>9</li>
+        <li>8</li>
+        <li>7</li>
+        <li>6</li>
+        <li>5</li>
+        <li>4</li>
+        <li>3</li>
+        <li>2</li>
+        <li>1</li>
+      </ul>
+      <ul style="background-color: #f1c40f;">
+        <li>1</li>
+        <li>5</li>
+        <li>3</li>
+        <li>7</li>
+        <li>4</li>
+        <li>0</li>
+        <li>3</li>
+        <li>4</li>
+        <li>6</li>
+      </ul>
+    </section>
+    <h2>Spin Now</h2>
+  </header>
+</body>
+</html>
