@@ -98,17 +98,14 @@
       padding: 5px 10px;
       border-radius: 10px;
       text-align: end;
+      overflow: hidden;
     }
     h2::after {
       display: block;
       content: 'ingat tuhan';
       font-size: 12px;
-      transform:scale(0);
-      transition: 1s all;
-      
-    }
-    h2:hover::after {
-      transform: scaleX(1);
+      transform: translateX(-100%);
+      animation: type 7s steps(18) infinite;
     }
   </style>
   <header>
