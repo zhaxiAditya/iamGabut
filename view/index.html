@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        color: #31363F;
+        /* font-family: "Bebas Neue", sans-serif; */
+        /* font-family: "Poppins", serif; */
+    }
+
+    h1 {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 6rem;
+    }
+    p {
+        font-family: "Poppins", serif;
+    }
+    nav  {
+        background-color: aquamarine;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 10%;
+        font-size: 1.2rem;
+        transition: ease-out 0.2s;
+    }
+    nav.fixed {
+        color: aquamarine;
+        position: fixed;
+        box-shadow: 1px 2px 16px #31363F;
+        z-index: 9999999;
+    }
+
+    nav ul, li {
+        display: flex;
+        gap: 1.5rem;
+        text-decoration: none;
+        justify-content: space-between;
+    }
+
+    a {
+        text-decoration: none;
+        color: #31363F;
+        font-weight: 600;
+        font-family: "Poppins", serif;
+    }
+    header {
+        background-color: aquamarine;
+        border-radius: 0px 0px 0rem 5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5rem 10% ;
+    }
+    section ul {
+        padding: 0.5rem 0px;
+        display: flex;
+        gap: 0.7rem;
+        justify-content: start;
+    }
+    section li {
+        background-color: aqua;
+        padding: 0.2rem 0.5rem;
+        color: aliceblue;
+        font-family: "Poppins", serif;
+        font-weight: 600;
+        border-radius: 0.5rem;
+    }
+    section li:nth-child(1) {
+        background-color: #E3651D;
+    }
+    section li:nth-child(2) {
+        background-color: red;
+    }
+    section li:nth-child(3) {
+        background-color: #4477CE;
+    }
+    .card {
+        width: 600px;
+        height: 400px;
+        position: relative;
+        background-image: url(../assets/Screenshot\ 2024-12-01\ 165605.png);
+        background-color: antiquewhite;
+        background-position: center;
+        background-size: cover;
+        border-radius: 0.2rem;
+    }
+    .card::after {
+        content: "";
+        position:absolute;
+        width: 580px;
+        height: 390px;
+        border: 0.6rem solid rgb(21, 224, 174);
+        transform: rotate(5deg);
+        border-radius: 0.2rem;
+    }
+
+    /* header::before {
+        content: "";
+        background-color: #ffffff;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 80%;
+    }*/
+</style>
+<body>
+    <nav id="navbar">
+        <div class="icon">
+            <a href="">FireFly</a>
+        </div>
+        <ul>
+            <li><a href="">Harga</a></li>
+            <li><a href="">Kebijakan</a></li>
+            <li><a href="">Kontak</a></li>
+        </ul>
+        <a href="">Daftar</a>
+    </nav>
+    <header>
+        <section>
+            <h1>Aplikas Kelola Produk, Mudah aman Murah.</h1>
+            <p style="font-weight: 400; font-style: italic;">Firefly, membantu anda dalam kelola Produk dengan mudah!</p>
+            <ul>
+                <li>Kelola Gudang</li>
+                <li>Kelola Ritel</li>
+                <li>Kelola Toko</li>
+            </ul>
+        </section>
+        <section>
+            <div class="card"></div>
+        </section>
+    </header>
+    <article>
+        
+    </article>
+</body>
+<script>
+        // script.js
+    const navbar = document.getElementById('navbar');
+
+    // Simpan posisi awal navbar
+    const navbarOffsetTop = navbar.offsetTop;
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > navbarOffsetTop) {
+            navbar.classList.add('fixed');
+        } else {
+            navbar.classList.remove('fixed');
+        }
+    });
+</script>
+</html>
